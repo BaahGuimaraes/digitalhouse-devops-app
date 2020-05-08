@@ -133,7 +133,7 @@ pipeline {
                             sh "docker stop app_prod"
                             sh "docker rm app_prod"
                         }
-                        sh "docker run -d --env NODE_ENV=producao --env BUCKET_NAME=dh-pi-devopsbarbara-prod --name app_prod -p 80:3000 733036961943.dkr.ecr.us-east-1.amazonaws.com/digitalhouse-devops-app:latest"
+                        sh "docker run -d --env NODE_ENV=producao --env BUCKET_NAME=dh-pi-devopsbarbara-prod --name app_prod -p 80:3000 329753855425.dkr.ecr.us-east-1.amazonaws.com/digitalhouse-devops-app:latest"
                         sh "docker ps"
                         sh 'sleep 10'
                         sh 'curl http://127.0.0.1:80/api/v1/healthcheck'
